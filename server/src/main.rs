@@ -1,3 +1,7 @@
+mod config;
+mod log;
+
 fn main() {
-    println!("Hello, world!");
+    let config = config::Config::load(std::path::Path::new("./config.json"));
+    println!("{}", config.debug);
 }
