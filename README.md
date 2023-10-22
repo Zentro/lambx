@@ -21,5 +21,5 @@ We first had a group reading session over the paper specifying the details of im
 ## What we learned
 ECC. The biggest part was simply understanding how finite fields and the numbers within them worked, alongside with how it is used in creating algorithms much faster than RSA's conventional Diffie-Hellman.
 
-## What's next for L.A.M.S
+## What's next for L.A.M.B.X
 We are planning for our XEdDSA implementation to be the foundational signature verification scheme for the PQXDH protocol we plan to build for our next Hackathon. It will then also be a part of a messaging app focused on anonymous communication through a small server.
