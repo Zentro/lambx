@@ -1,7 +1,6 @@
 mod xeddsa;
-
-use x25519_dalek::{StaticSecret, PublicKey};
+mod test;
 
 fn main() {
-
+    test::test();
 }

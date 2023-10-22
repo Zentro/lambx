@@ -3,7 +3,7 @@ use bnum::types::U256;
 use curve25519_dalek::{edwards::{EdwardsPoint, CompressedEdwardsY}, Scalar, MontgomeryPoint, scalar::clamp_integer};
 use x25519_dalek::{PublicKey, StaticSecret};
 
-struct XEdDSA {
+pub struct XEdDSA {
     prime: U256,
     sk_scalar: Scalar,
 }
@@ -19,7 +19,7 @@ impl XEdDSA {
         }
     }
 
-    fn sign(&self, msg: &[u8], nonce: &[u8]) -> [u8; 64] {
+    pub fn sign(&self, msg: &[u8], nonce: &[u8]) -> [u8; 64] {
         let (ed_pk, ed_sk) = self.calculate_key_pair(self.sk_scalar);
         
         let concat1 = [&ed_sk, msg, nonce].concat();
@@ -42,7 +42,7 @@ impl XEdDSA {
         to_ret
     }
 
-    fn verify(&self, pk: PublicKey, msg: &[u8], sig: [u8; 64]) -> bool {
+    pub fn verify(&self, pk: PublicKey, msg: &[u8], sig: [u8; 64]) -> bool {
         let mont_pk = pk.to_bytes();
         let pk_int: U256 = U256::from_le_slice(&mont_pk).unwrap();
         // Separate R from sig
