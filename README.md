@@ -1,4 +1,6 @@
 # Latifa (our Unity 3D asset mascot): Alice Messages Bob (and signs using the) XEdDSA (protocol from Signal written in Rust)
+Read the specification document here https://signal.org/docs/specifications/xeddsa/
+
 ## Inspiration
 The PQXDH protocol recently revealed by Signal seems promising for safe and anonymous messaging even with the advent of quantum computing possibly breaking our traditional asymmetric key exchange algorithms. We (ambitiously) wanted to implement this protocol alongside a message app using it as a backbone for secure key exchanges.
 
