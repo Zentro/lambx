@@ -18,10 +18,10 @@ We first had a group reading session over the paper specifying the details of im
 - Setting up the Raspberry Pi was a nightmare, though we did not use it much.
 
 ## Accomplishments that we're proud of
-- But all in all, we're proud of presenting possibly the first proof-of-concept of the XEdDSA algorithm in Rust that will be publicly available. Though we do not guarantee full cryptographic security (given the peculiarities of cryptography), it presents the source material faithfully enough that we're confident to say that it could be foundational for a more fleshed out implementation.
+- But all in all, we're proud building a working version of the XEdDSA algorithm in Rust. Though we do not guarantee full cryptographic security (given the peculiarities of cryptography), it presents the source material faithfully enough that we're confident to say that it could be foundational for a more fleshed out implementation.
 
 ## What we learned
-ECC. The biggest part was simply understanding how finite fields and the numbers within them worked, alongside with how it is used in creating algorithms much faster than RSA's conventional Diffie-Hellman.
+ECC. The biggest part was simply understanding how finite fields and the numbers within them worked, alongside with how it is used in creating algorithms much faster than convential RSA means.
 
 ## What's next for L.A.M.B.X
 We are planning for our XEdDSA implementation to be the foundational signature verification scheme for the PQXDH protocol we plan to build for our next Hackathon. It will then also be a part of a messaging app focused on anonymous communication through a small server.
